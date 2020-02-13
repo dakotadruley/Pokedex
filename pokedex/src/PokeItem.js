@@ -7,21 +7,20 @@ export default class PokeItem extends Component {
         return (
             <>
             <li className='poke' key={pokes._id}>
-                <table className='pokeContainer'>
+                <h2 id='pokeHeader'>{pokes.pokemon}</h2>
+                <table>
+                    <tr className='tableRow'>
+                        <td><strong>Type 1:</strong> {pokes.type_1}</td>
+                        <td><strong>Type 2:</strong> {pokes.type_2}</td>
+                    </tr>
+                    <tr className='tableRow'>
+                        <td><strong>Height:</strong> {pokes.height}</td>
+                        <td><strong>Weight:</strong> {pokes.weight}</td>
+                    </tr>
                     <tr>
-                        <th>{pokes.pokemon}</th>
-                    </tr>
-                    <tr className='tableRow'>
-                        <td>Height: {pokes.height}</td>
-                        <td>Weight: {pokes.weight}</td>
-                        <td>Type 1: {pokes.type_1}</td>
-                        <td>Type 2: {pokes.type_2}</td>
-                    </tr>
-                    <tr className='tableRow'>
-                        <td>HP: {pokes.hp}</td>
-                        <td>Attack: {pokes.attack}</td>
-                        <td>Defense: {pokes.defense}</td>
-                        <td>Speed: {pokes.speed}</td>
+                        <td className='lastRow'><strong>Attack:</strong> {pokes.attack}</td>
+                        <td className='lastRow'><strong>Defense:</strong> {pokes.defense}</td>
+                        <td className='lastRow'><strong>Speed:</strong> {pokes.speed}</td>
                     </tr>
                 </table>
                 <div className='imageContainer'>
