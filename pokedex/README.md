@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+// similar than fetch
+const request = require('superagent');
+
+const getQueens = async() => {
+    const queens = await request.get('www.api.com);
+}
