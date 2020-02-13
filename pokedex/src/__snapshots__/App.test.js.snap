@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App.js correctly 1`] = `
+Array [
+  <header>
+    <div>
+      <h1>
+        Pokédex
+      </h1>
+    </div>
+  </header>,
+  <div />,
+  <ul
+    className="pokes"
+  />,
+  "loading",
+]
+`;
+
+exports[`renders Header.js correctly 1`] = `
+<header>
+  <div>
+    <h1>
+      Pokédex
+    </h1>
+  </div>
+</header>
+`;

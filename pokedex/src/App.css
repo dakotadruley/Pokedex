@@ -32,7 +32,7 @@ th {
   font-size: 30px;
 }
 
-.pokés {
+.pokes {
   display: flex;
   flex-direction: row;
 }

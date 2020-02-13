@@ -1,7 +1,6 @@
 // map here
 import React, { Component } from 'react';
 import PokeItem from './PokeItem.js';
-import pokeData from './data/data.js';
 import request from 'superagent';
 
 export default class PokeList extends Component {
@@ -9,14 +8,12 @@ export default class PokeList extends Component {
 
       async componentDidMount() {
         const data = await request.get('https://alchemy-pokedex.herokuapp.com/api/pokedex')
-        console.log(data.body)
     
-        this.setState({ pokeData: data.body })
+        this.setState({ pokeData: data.body.results })
       }
     render() {
-        const pokes = pokeData;
+        const pokes = this.state.pokeData;
         const data = pokes.map(poke => {
-            console.log(poke);
             return (<PokeItem key={poke.pokemon} poke={poke}/>)
             
         })
@@ -24,7 +21,7 @@ export default class PokeList extends Component {
 
         return (
             <>
-            <ul className='pokés'>{data}</ul>
+            <ul className='pokes'>{data}</ul>
             { this.state.data ? JSON.stringify(this.state.data) : 'loading' }
             </>
         )
