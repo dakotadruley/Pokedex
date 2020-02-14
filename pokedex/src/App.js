@@ -11,8 +11,6 @@ export default class App extends React.Component {
     return (
       <>
       <Header />
-      <div>
-      </div>
       <PokeList />
       <Footer />
       </>
