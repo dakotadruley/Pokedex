@@ -9,8 +9,9 @@ export default class Home extends Component {
 
     async loadPokes() {
         const response = await getPokes();
-        const pokes = response.Search;
-        const totalResults = response.totalResults;
+        const pokes = response.results;
+        console.log(pokes);
+        const totalResults = response.count;
         this.setState({
             pokeData: pokes,
             totalResults: totalResults,
@@ -19,7 +20,7 @@ export default class Home extends Component {
 
     async componentDidMount() {
         await this.loadPokes();
-
+        console.log(this.state.pokeData);
         window.addEventListener('hashchange', async () => {
             await this.loadPokes();
         });
@@ -31,7 +32,7 @@ export default class Home extends Component {
         return (
             <>
             <SearchOptions />
-            <PokeList pokes={pokeData}/>
+            <PokeList pokeData={pokeData}/>
             <Paging totalResults={totalResults}/>
             </>
         );

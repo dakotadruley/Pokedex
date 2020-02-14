@@ -52,3 +52,32 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.searchDiv {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.leftButton, .rightButton, .searchButton {
+  background-color: steelblue;
+  height: 2.5em;
+  width: 6em;
+  border: 0.25em solid black;
+  font-family: monospace;
+}
+
+.pageDiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.pageNumbers {
+  margin: 0.25em;
+  font-weight: bolder;
+}
+
+#search {
+  border: 0.25em solid black;
+}
